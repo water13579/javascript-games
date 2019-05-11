@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Four In A Row</title>
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<style type="text/css">
+		body {
+		}
+		#board {
+			grid-template-columns: 60px 60px 60px 60px 60px 60px 60px; 
+			/*position: absolute;*/
+			display: grid;
+			grid-gap: 12px;
+			border-radius: 10px;
+			width: 490px;
+			height:420px;
+			margin: auto;
+			margin-top: 1%;
+			background: blue;
+			padding: 30px;
+		}
+		.cell {
+			position: relative;
+			border-radius: 50%
+
+		}
+		.slantLine {
+			position: absolute;
+			background: black;
+			height: 20%;
+			width: 520%;
+			border-radius: 25px;
+			bottom: 40%;
+			left: 60%;
+			z-index: 30;
+			transform: rotate(45.2deg);
+			transform-origin: 0% 0%;
+			animation: win 1.2s linear;
+		}
+		.slantLineUp {
+		    position: absolute;
+		    background: black;
+		    height: 20%;
+		    width: 520%;
+		    border-radius: 25px;
+		    bottom: -200px;
+		    left: -195px;
+		    z-index: 30;
+		    transform: rotate(314.8deg);
+		    transform-origin: 0% 0%;
+		    animation: win 1.2s linear;
+		}
+		.hrLine {
+			position: absolute;
+			background: black;
+			height: 20%;
+			width: 413%;
+			border-radius: 25px;
+			bottom: 40%;
+			left: 20%;
+			z-index: 30;
+			animation: win 1s linear;
+		}
+		.vrLine {
+			position: absolute;
+			background: black;
+			height: 20%;
+			width: 400%;
+			border-radius: 25px;
+			bottom: 40%;
+			left: 40px;
+			z-index: 30;
+			transform: rotate(90deg) translateY(41%);
+
+			transform-origin: 0% 0%;
+			animation: win 1s linear;
+		}
+
+		@keyframes win {
+			from {width: 0%;}
+			to {width: 400%;}
+		}
+
+		#coin {
+			top: 10px;
+			position: relative;
+			width: 60px;
+			height: 60px;
+			border-radius: 50%;
+
+		}
+		#resetButton {
+			display: block;
+			cursor: pointer;
+			background: white;
+			/*left: 0;*/
+			/*right: 0;*/
+			margin: auto;
+			width: 110px;
+			height: 40px;
+			border: 4px solid #71dada;
+			border-radius: 20px;
+			transition: 0.3s;
+		}
+		#resetButton:hover {
+			background: #71dada;
+
+		}
+		#resetButton:active {
+			transform: scale(0.95);
+		}
+	</style>
+</head>
+<body>
+	<div id="coin"></div>
+	<div id="board">
+
+	</div>
+	<button id="resetButton">Click Me</button>
+
+	<script src="C:\Users\owner\Documents\four-in-a-row\main.js"></script>
+</body>
+</html>

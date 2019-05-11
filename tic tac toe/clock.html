@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Clock</title>
+	<style type="text/css">
+		body {
+		}
+		svg {
+			position: absolute;
+			display: inline-block;
+			margin: auto;
+			top: 50%;
+			left: 0;
+			right: 0;
+			/*left: 50%;*/
+			transform: translateY(-50%);
+		}
+		.center {
+			position: absolute;
+			/*margin: auto;*/
+			top: 50%;
+			left: 50%;
+			transform: translate(50%, 50%);
+		}
+	</style>
+</head>
+<body>
+
+		<svg width="400" height="400">
+			<!-- <circle cx="200" cy="200" r="200" fill="lightgrey" />
+			<line x1="200" y1="200" x2="200" y2="400" stroke="black">
+				<animate attributeType="XML" attributeName="x2" from="-200" to="200" dur="10s" repeatCount="indefinite"/>
+			</line> -->
+			<path d="M200 0 C200 400 C200 0 Z"/>
+		</svg>
+
+	<script type="text/javascript">
+		function getSecondsX() {
+
+		}
+	</script>
+</body>
+</html>
