@@ -26,8 +26,9 @@ function makeMove(event, dropList) {
 		console.log(dropList[area].left < event.clientX && dropList[area].right > event.clientX)
 		if (dropList[area].left < event.clientX && dropList[area].right > event.clientX) {
 
-			putLowest(area, color)
-			turn++
+			if (putLowest(area, color)) {
+				turn++
+			}
 		}
 	}
 
@@ -47,9 +48,10 @@ function putLowest(area, color) {
 	for (var i = 41; i >= 0; i -= 7) {
 		if (cells[i-6+num].style.background === 'white') {
 			cells[i-6+num].style.background = color
-			break
+			return true
 		}
 	}
+	return false
 	
 }
 
